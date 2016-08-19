@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>威客-猪八戒网</title>
+<link rel="icon" href="猪八戒pic/QQ截图20160512194710.jpg" type="image/gif"  />
+<style type="text/css" >
+body{font-family: "Helvetica Neue", Helvetica, Arial, 'Microsoft Yahei', sans-serif;}	
+*{padding:0;margin:0;}
+li{list-style:none;}
+.fl{float:left;}
+.fr{float:right;}
+.wrap{width:1190px;margin:0 auto;}
+i{display:inline-block;}
+.header{background:#f8f8f8;height:33px;line-height:32px;font-family: simsun, serif;border-bottom:1px solid #e7e7e7;position:fixed;top:0;z-index:2;width:100%;}
+a{text-decoration:none;}
+.header a{color:#555;font-size:12px;padding:0 14px 0 8px;display:inline-block;border:1px solid #f8f8f8;border-top:none;border-bottom:none;}
+.wei{width:16px;height:16px;overflow:hidden;vertical-align:middle;margin-right:5px;position:relative;}
+.wei img{position:absolute;}
+.bkBai{position:relative;}
+.bkBai:hover a{background:#fff;border-color:#e7e7e7;}
+.bkBai:hover .wei img{top:-16px;}
+.headerLeft{float:left;display:inline;height:32px;}
+.headerRight{float:right;display:inline;height:32px;}
+.a_orange{color:#f60;}
+.a_line:hover>a{text-decoration:underline;}
+.headerDown a{text-decoration:none;border:none;display:block;}
+.headerDown{position:absolute;z-index:2;background:#fff;border:1px solid #f8f8f8;border-top:none;border-bottom:none;display:none;}
+.bkBai:hover .headerDown{display:block;}
+.headerStyle2 a:hover{background:#f4f4f4;}
+
+.header_search{width:592px;height:40px;border:3px solid #f60;margin-top:25px;margin-left:20px;}
+.header_wrap{height:40px;border:none;}
+.header_down li{display:inline-block;font-size:16px;padding:0 12px;color:#444;font-weight:400;margin-right:5px;}
+.header_down li:hover{color:#f60;}
+
+
+.title li{height:43px;line-height:35px;width:140px;font-size:14px;background:#f70;padding-left:28px;color:#fff;}
+.title li a{color:#fff;}
+.title li a:hover{text-decoration:underline;}
+.title li:hover{background:#f80;padding-left:33px;width:135px;}
+.title-list{display:none;position:absolute;left:170px;top:43px;width:675px;height:470px;border: 1px solid #e8e8e8;border-left:none;background:#fff;z-index:1;}
+.title li:hover .title-list{display:block;}
+
+dt{color:black;height:31px;font-size:16px;font-weight:bold;border-bottom:1px solid black;margin-left:20px;margin-top:15px;}
+dd{color:#868686;font-size:12px;line-height:20px;margin:10px;}
+dd a{margin:10px 15px;}
+
+.title-pic{position:absolute;left:170px;top:0;width:675px;height:470px;border: 1px solid #e8e8e8;border-left:none;}
+.title-pic img{width:450px;height:470px;}
+#pic{width:2700px;height:470px;position:absolute;left:0;}
+#pic li{float:left;}
+#yuan-button li{display:inline-block;width:12px;height:12px;border-radius:6px;}
+.move-button{position:absolute;top:210px;width:50px;height:50px;background:#666;opacity:0;line-height:50px;font-size:50px;text-align:center;}
+.title-pic:hover .move-button{opacity:0.5;}
+.move-button:hover .move-button{opacity:1;}
+.bkcolor{background:#f60;}
+.whcolor{background:#fff;}
+
+.title-side{position:absolute;right:0;top:0;}
+.title-side div{width:220px;height:157px;}
+.title-side img{width:220px;height:156px;border-bottom:1px solid #e8e8e8;}
+
+.midbox{height:98px;border:1px solid #e8e8e8;margin:15px 0;}
+.smallbox{width:395px;height:70px;border-right:1px solid #e8e8e8;margin:14px 0;}
+.bigtitle{font-size: 20px;font-weight:700;height:50px;padding:10px 20px;}
+.smallbox ul{width:310px;margin:10px 0;}
+.smallbox li a{color:#555;font-size:14px;}
+.smallbox li a:hover{color:#f60;}
+.smallbox li{width:70px;height:25px;padding:0 3px;}
+
+.menulist{border-top:1px solid #e8e8e8;border-right:1px solid #e8e8e8;height:99px;width:168px;position:relative;}
+.menulist img{width:168px;}
+.menulist span{position:absolute;background:#f8f8f8;color:#f60;z-index:1;left:0;top:0;width:168px;height:99px;line-height:100px;text-align:center;display:none;}
+.menulist:hover span{display:block;}
+.special{font-size:14px;color:#939292;line-height:100px;text-align:center;}
+.special:hover{background:#f8f8f8;}
+
+.shizhu{height:30px;padding:10px 0}
+.shizhu h2{float:left;font-size:16px;font-weight:600;padding-left:10px;color:#000;}
+.shizhu li{width:100px;float:1eft;line-height:20px;display:inline-block;border-right:1px solid #555;}
+
+#adv{width:1190px;height:200px;background:#fbfbfb;overflow:hidden;position:relative;margin:10px 0;}
+#adv1{width:2380px;position:absolute;left:0;top:0;}
+.adv-menu{width:1190px;height:200px;float:left;}
+.adv-list{width:396px;}
+.adv-list a{color:#555;}
+.adv-list a:hover{color:#f60;}
+.adv-list ul{width:240px;margin-top:5px;}
+.adv-list h4{border-left:3px solid #f60;padding-left:10px;}
+.adv-list li{float:left;font-size:12px;color:#555;margin:0 5px;line-height:20px;}
+.adv-line{margin-top:25px;}
+#adv-button{position:absolute;left:550px;bottom:5px;z-index:5;}
+#adv-button1,#adv-button2{width:10px;height:10px;border-radius:5px;background-color:#666666;float:left;margin:0 10px;}
+#adv-button1{background-color:orange;}
+</style>
+<script type="text/javascript">
+window.onload=function(){	
+var yuan=document.getElementById("yuan-button"),
+	y_button=yuan.getElementsByTagName("li"),
+	pic=document.getElementById("pic"),
+	lButton=document.getElementById("left-button"),
+	rButton=document.getElementById("right-button");
+	var index=0;
+	
+function color(e){
+	   for(var i=0;i<y_button.length;i++){
+		  if(i!=e){
+			  y_button[i].className="whcolor";
+		  }
+		  else{y_button[e].className="bkcolor";}
+		}
+	}	
+	
+for(var i=0;i<y_button.length;i++){
+	y_button[i].onmouseover=function(){
+		pic.style.left=parseInt(this.getAttribute("index")*-450)+"px";
+		color(parseInt(this.getAttribute("index")));	 
+		};	
+	};  
+	
+rButton.onclick=function(){
+	if(pic.style.left=="-2250px"||pic.style.left==""){
+	  pic.style.left=0;
+	  e=-(parseInt(pic.style.left)/450);
+	  color(e);
+	  }else {
+	  pic.style.left=parseInt(pic.style.left)-450+"px";
+	   e=-(parseInt(pic.style.left)/450);
+	  color(e);}
+	}	
+	
+lButton.onclick=function(){
+	if(pic.style.left==0||pic.style.left==""){
+	  pic.style.left="-2250px";
+	   e=-(parseInt(pic.style.left)/450);
+	  color(e);
+	  }else{
+	  pic.style.left=parseInt(pic.style.left)+450+"px";
+	   e=-(parseInt(pic.style.left)/450);
+	  color(e);}
+	}	
+}
+</script>
+<script src="myproductions/jQuery/jquery-1.12.3.min.js"></script>
+<script>
+$(function(){
+$("#adv-button2").mouseenter(function(){
+$("#adv1").animate({left:-1190});
+$(this).css("background-color","orange");
+$("#adv-button1").css("background-color","#666666");
+	})
+$("#adv-button1").mouseenter(function(){
+$("#adv1").animate({left:0});
+$(this).css("background-color","orange");
+$("#adv-button2").css("background-color","#666666");
+	})	
+})
+</script>
+<body>
+<div class="header" >
+   <div class="wrap">
+   		<div class="headerLeft">
+   			<div class="fl bkBai"><a href="#"> <i class="wei"><img src="猪八戒pic/ico-mobile-wei.png"></i>手机猪八戒</a>
+				<div class="headerDown" style="left:0;width:255px;">
+					<div class="fl"><img src="猪八戒pic/QQ截图20160512182938.jpg"></div>
+					<div class="fr">
+						<p>微信扫码</p>
+						<p>随时选购服务</p>
+						<a href="#">下载猪八戒App</a>
+					</div>
+				</div>
+			</div>
+			<div class="fl a_orange a_line"><a href="#">国际猪八戒</a></div>
+		</div>
+		<div class="headerRight">
+			<div class="fl a_line bkBai"><a href="#">登录</a>
+				<div class="headerDown" style="left:0;width:125px;}>
+					<ul class="headerStyle1">
+						<li class="a_orange a_line"><a href="#"><img src="猪八戒pic/QQ截图20160512194721.jpg">猪八戒账号登录</a></li>
+						<li class="a_orange a_line"><a href="#"><img src="猪八戒pic/QQ截图20160512194721.jpg">淘宝账号登录</a></li>
+						<li class="a_orange a_line"><a href="#"><img src="猪八戒pic/QQ截图20160512194733.jpg">微博账号登录</a></li>
+						<li class="a_orange a_line"><a href="#"><img src="猪八戒pic/QQ截图20160512194742.jpg">QQ账号登录</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="fl a_line a_orange"><a href="#">免费注册</a></div>
+			<div class="fl a_line a_orange"><a href="#">我的订单</a></div>
+			<div class="fl a_line bkBai"><a href="#">我是雇主</a>
+				<div class="headerDown" style="width:72px;">
+				 	<ul class="headerStyle2">
+						<li><a href="#">找服务商</a></li>
+						<li><a href="#">发布需求</a></li>
+						<li><a href="#">常见问题</a></li>
+						<li><a href="#">八戒特惠</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="fl a_line bkBai"><a href="#">我是服务商</a>
+				<div class="headerDown" style="right:0;width:95px;">
+					<ul class="headerStyle2">
+						<li><a href="#">交易管理</a><li>
+						<li><a href="#">免费开店</a><li>
+						<li><a href="#" class="a_orange">投标赚钱</a><li>
+						<li><a href="#">钉耙手机管店</a><li>
+						<li><a href="#">猪八戒商学院</a><li>
+						<li><a href="#">八戒活动</a><li>
+						<li><a href="#" class="a_orange">八戒通</a><li>
+						<li><a href="#">皇冠钻石会员</a><li>
+						<li><a href="#">八戒推广通</a><li>
+						<li><a href="#">图片广告位</a><li>
+						<li><a href="#">品牌推荐</a><li>
+						<li><a href="#">至尊标王广告</a><li>
+					</ul>
+				</div>
+			</div>
+			<div class="fl a_line a_orange"><a href="#">我的收藏</a></div>
+			<div class="fl a_line bkBai"><a href="#">帮助中心</a>
+				<div class="headerDown" style="right:0;width:90px;">
+					<ul class="headerStyle2">
+						<li><a href="#">新手入门</a></li>
+						<li><a href="#">雇主问题</a></li>
+						<li><a href="#">服务商问题</a></li>
+						<li><a href="#">联系客服</a></li>
+						<li><a href="#">意见反馈</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="fl a_line bkBai"><a href="#">网站导航</a>
+				<div class="headerDown" style="right:0;width:1190px;height:190px;">
+					<dl>
+					</dl>
+				</div>
+			</div>
+		</div>
+   </div> 
+</div><!--头部-->
+
+<div id="header_middle" style="height:120px;margin-top:50px;">
+	<div class="wrap">
+    	<div class="fl"><a href=""><img src="猪八戒pic/new-logo-index.png"></a>
+        </div>
+        <div class="fl"><a href=""><img src="猪八戒pic/8c9168e9-9ba4-498e-825c-de49766f6b1b.gif" style="padding-top:10px;"></a>
+        </div>
+        <div class="fl header_search">
+		<select class="header_wrap" style="color:#7d7d7d;font-size:15px;font-family: simsun, serif;">
+        <option>综合搜索</option>
+        <option>找服务</option>
+        <option>找服务商</option>
+        <option>找需求</option>
+        <option>综合搜索</option>
+        </select>
+        <input type="text" class="header_wrap" style="width:420px" value="">
+        <input type="button" class="fr header_wrap"value="搜索" style="background:#f60;color:#fff;width:65px;font-size:16px;font-weight:bold;">
+        	 <div style="font-size:10px;color:#999;line-height:35px;">
+            		<span>热门搜索: </span><span>八戒经纪人</span><span>软件定制</span><span>电商大促</span>建站送400<span>全场折扣</span><span>商标注册</span><span>企业翻译</span><span>Logo设计</span>
+            </div>
+        </div>
+           
+        
+        <div class="fl" style="margin-top:25px;padding:14px 10px;font-size:10px;color:#ccc;">或者</div>
+        <div class="fl" style="margin-top:38px;"><a href=""  style="background:#f60;color:#fff;font-size:16px;padding:13px 5px;font-weight:bold;width:90px;" >免费发需求</a></div>
+    </div>
+</div><!--中间搜索框-->
+
+
+    <div class="wrap" style="height:38px;margin-top:5px;">
+        <div class="fr header_down ">
+        <ul>
+          <a href="" ><li style="color:#f60;">服务商库</li></a>
+          <a href="" ><li style="color:#f60;">需求大厅</li></a>
+          <a href="" ><li style="color:#f60;">案例库</li></a>
+          <a href="" ><li>八戒悬赏</li></a>
+          <a href="" ><li>一元代账</li></a>
+          <a href="" ><li>八戒知识产权</li></a>
+          <a href="" ><li>八戒工程</li></a>
+          <a href="" ><li>天蓬网</li></a>
+          <a href="" ><li>八戒+城市</li></a>
+          <a href=""><li>八戒印刷</li></a>
+        </ul>
+        </div>
+    </div><!--下标题  -->
+      
+ <div class="wrap" style="position:relative;height:472px;">
+         <div class="title fl" style="position:absolute;left:0;top:-43px;">
+                <h2 style="width:168px;height:43px;line-height:43px;font-size:16px;font-weight: normal;background:#f60;color:#fff;text-align:center;">全部分类</h2>
+                <ul>
+                   <li><a href="">LOGO</a>/<a href="">包装</a>/<a href="">VI设计</a>
+                        <div class="title-list"> 
+                              <div class="fl" style="width:450px;height:100%;border-right:1px solid #868686;">
+                                 <dl style="width:440px;">
+                                    <dt><a href="" style="color:black;">LOGO设计</a></dt>
+                                    <dd><a href="" style="color:#868686;">Logo设计专场</a><a href="" style="color:#868686;">Logo设计套餐</a><a href="" style="color:#868686;">品牌设计一站购</a></dd>
+                                    <dd><a href="" style="color:#868686;">设计送电影票</a><a href="" style="color:#868686;">企业Logo</a><a href="" style="color:#868686;">餐饮Logo</a>
+                                    <a href="" style="color:#868686;">地产Logo</a><a href="" style="color:#868686;">互联网Logo</a></dd>
+                                    <dt><a href="" style="color:black;">LOGO设计</a></dt>
+                                    <dd><a href="" style="color:#868686;">Logo设计专场</a><a href="" style="color:#868686;">Logo设计套餐</a><a href="" style="color:#868686;">品牌设计一站购</a></dd>
+                                    <dd><a href="" style="color:#868686;">设计送电影票</a><a href="" style="color:#868686;">企业Logo</a><a href="" style="color:#868686;">餐饮Logo</a>
+                                    <a href="" style="color:#868686;">地产Logo</a><a href="" style="color:#868686;">互联网Logo</a></dd>
+                                    <dt><a href="" style="color:black;">LOGO设计</a></dt>
+                                    <dd><a href="" style="color:#868686;">Logo设计专场</a><a href="" style="color:#868686;">Logo设计套餐</a><a href="" style="color:#868686;">品牌设计一站购</a></dd>
+                                    <dd><a href="" style="color:#868686;">设计送电影票</a><a href="" style="color:#868686;">企业Logo</a><a href="" style="color:#868686;">餐饮Logo</a>
+                                    <a href="" style="color:#868686;">地产Logo</a><a href="" style="color:#868686;">互联网Logo</a></dd>
+                                    <dt><a href="" style="color:black;">LOGO设计</a></dt>
+                                    <dd><a href="" style="color:#868686;">Logo设计专场</a><a href="" style="color:#868686;">Logo设计套餐</a><a href="" style="color:#868686;">品牌设计一站购</a></dd>
+                                    <dd><a href="" style="color:#868686;">设计送电影票</a><a href="" style="color:#868686;">企业Logo</a><a href="" style="color:#868686;">餐饮Logo</a>
+                                    <a href="" style="color:#868686;">地产Logo</a><a href="" style="color:#868686;">互联网Logo</a></dd>
+                                 </dl>
+                              </div> 
+                             <div class="fr title-side">          
+                               <div><img src="猪八戒pic/11.jpg"></div>
+                               <div><img src="猪八戒pic/12.jpg"></div>
+                               <div><img src="猪八戒pic/13.jpg"></div>
+                             </div>
+                        </div>	
+                   </li>
+                   <li><a href="">宣传品</a>/<a href="">广告</a>/<a href="">海报</a>
+                  	   <div class="title-list"> 
+                              <div class="fl" style="width:450px;height:100%;border-right:1px solid #868686;">
+                                 <dl style="width:440px;">
+                                    <dt><a href="" style="color:black;">LOGO设计</a></dt>
+                                    <dd><a href="" style="color:#868686;">Logo设计专场</a><a href="" style="color:#868686;">Logo设计套餐</a><a href="" style="color:#868686;">品牌设计一站购</a></dd>
+                                    <dd><a href="" style="color:#868686;">设计送电影票</a><a href="" style="color:#868686;">企业Logo</a><a href="" style="color:#868686;">餐饮Logo</a>
+                                    <a href="" style="color:#868686;">地产Logo</a><a href="" style="color:#868686;">互联网Logo</a></dd>
+                                    <dt><a href="" style="color:black;">LOGO设计</a></dt>
+                                    <dd><a href="" style="color:#868686;">Logo设计专场</a><a href="" style="color:#868686;">Logo设计套餐</a><a href="" style="color:#868686;">品牌设计一站购</a></dd>
+                                    <dd><a href="" style="color:#868686;">设计送电影票</a><a href="" style="color:#868686;">企业Logo</a><a href="" style="color:#868686;">餐饮Logo</a>
+                                    <a href="" style="color:#868686;">地产Logo</a><a href="" style="color:#868686;">互联网Logo</a></dd>
+                                    <dt><a href="" style="color:black;">LOGO设计</a></dt>
+                                    <dd><a href="" style="color:#868686;">Logo设计专场</a><a href="" style="color:#868686;">Logo设计套餐</a><a href="" style="color:#868686;">品牌设计一站购</a></dd>
+                                    <dd><a href="" style="color:#868686;">设计送电影票</a><a href="" style="color:#868686;">企业Logo</a><a href="" style="color:#868686;">餐饮Logo</a>
+                                    <a href="" style="color:#868686;">地产Logo</a><a href="" style="color:#868686;">互联网Logo</a></dd>
+                                    <dt><a href="" style="color:black;">LOGO设计</a></dt>
+                                    <dd><a href="" style="color:#868686;">Logo设计专场</a><a href="" style="color:#868686;">Logo设计套餐</a><a href="" style="color:#868686;">品牌设计一站购</a></dd>
+                                    <dd><a href="" style="color:#868686;">设计送电影票</a><a href="" style="color:#868686;">企业Logo</a><a href="" style="color:#868686;">餐饮Logo</a>
+                                    <a href="" style="color:#868686;">地产Logo</a><a href="" style="color:#868686;">互联网Logo</a></dd>
+                                 </dl>
+                              </div> 
+                             <div class="fr title-side">          
+                               <div><img src="猪八戒pic/15.jpg"></div>
+                               <div><img src="猪八戒pic/16.jpg"></div>
+                               <div><img src="猪八戒pic/17.jpg"></div>
+                             </div>
+                       </div>	
+                   </li>
+                   <li><a href="">商标</a>/<a href="">版权</a>/<a href="">专利</a>/<a href="">法律</a>
+                  	  <div class="title-list"> 
+                              <div class="fl" style="width:450px;height:100%;border-right:1px solid #868686;">
+                                 <dl style="width:440px;">
+                                    <dt><a href="" style="color:black;">LOGO设计</a></dt>
+                                    <dd><a href="" style="color:#868686;">Logo设计专场</a><a href="" style="color:#868686;">Logo设计套餐</a><a href="" style="color:#868686;">品牌设计一站购</a></dd>
+                                    <dd><a href="" style="color:#868686;">设计送电影票</a><a href="" style="color:#868686;">企业Logo</a><a href="" style="color:#868686;">餐饮Logo</a>
+                                    <a href="" style="color:#868686;">地产Logo</a><a href="" style="color:#868686;">互联网Logo</a></dd>
+                                    <dt><a href="" style="color:black;">LOGO设计</a></dt>
+                                    <dd><a href="" style="color:#868686;">Logo设计专场</a><a href="" style="color:#868686;">Logo设计套餐</a><a href="" style="color:#868686;">品牌设计一站购</a></dd>
+                                    <dd><a href="" style="color:#868686;">设计送电影票</a><a href="" style="color:#868686;">企业Logo</a><a href="" style="color:#868686;">餐饮Logo</a>
+                                    <a href="" style="color:#868686;">地产Logo</a><a href="" style="color:#868686;">互联网Logo</a></dd>
+                                    <dt><a href="" style="color:black;">LOGO设计</a></dt>
+                                    <dd><a href="" style="color:#868686;">Logo设计专场</a><a href="" style="color:#868686;">Logo设计套餐</a><a href="" style="color:#868686;">品牌设计一站购</a></dd>
+                                    <dd><a href="" style="color:#868686;">设计送电影票</a><a href="" style="color:#868686;">企业Logo</a><a href="" style="color:#868686;">餐饮Logo</a>
+                                    <a href="" style="color:#868686;">地产Logo</a><a href="" style="color:#868686;">互联网Logo</a></dd>
+                                    <dt><a href="" style="color:black;">LOGO设计</a></dt>
+                                    <dd><a href="" style="color:#868686;">Logo设计专场</a><a href="" style="color:#868686;">Logo设计套餐</a><a href="" style="color:#868686;">品牌设计一站购</a></dd>
+                                    <dd><a href="" style="color:#868686;">设计送电影票</a><a href="" style="color:#868686;">企业Logo</a><a href="" style="color:#868686;">餐饮Logo</a>
+                                    <a href="" style="color:#868686;">地产Logo</a><a href="" style="color:#868686;">互联网Logo</a></dd>
+                                 </dl>
+                              </div> 
+                             <div class="fr title-side">          
+                               <div><img src="猪八戒pic/20.jpg"></div>
+                               <div><img src="猪八戒pic/21.jpg"></div>
+                               <div><img src="猪八戒pic/22.jpg"></div>
+                             </div>
+                       </div>	
+                   </li>
+                   <li><a href="">网店服务</a>/<a href="">营销推广</a>
+                       <div class="title-list"> 
+                              <div class="fl" style="width:450px;height:100%;border-right:1px solid #868686;">
+                                 <dl style="width:440px;">
+                                    <dt><a href="" style="color:black;">LOGO设计</a></dt>
+                                    <dd><a href="" style="color:#868686;">Logo设计专场</a><a href="" style="color:#868686;">Logo设计套餐</a><a href="" style="color:#868686;">品牌设计一站购</a></dd>
+                                    <dd><a href="" style="color:#868686;">设计送电影票</a><a href="" style="color:#868686;">企业Logo</a><a href="" style="color:#868686;">餐饮Logo</a>
+                                    <a href="" style="color:#868686;">地产Logo</a><a href="" style="color:#868686;">互联网Logo</a></dd>
+                                    <dt><a href="" style="color:black;">LOGO设计</a></dt>
+                                    <dd><a href="" style="color:#868686;">Logo设计专场</a><a href="" style="color:#868686;">Logo设计套餐</a><a href="" style="color:#868686;">品牌设计一站购</a></dd>
+                                    <dd><a href="" style="color:#868686;">设计送电影票</a><a href="" style="color:#868686;">企业Logo</a><a href="" style="color:#868686;">餐饮Logo</a>
+                                    <a href="" style="color:#868686;">地产Logo</a><a href="" style="color:#868686;">互联网Logo</a></dd>
+                                    <dt><a href="" style="color:black;">LOGO设计</a></dt>
+                                    <dd><a href="" style="color:#868686;">Logo设计专场</a><a href="" style="color:#868686;">Logo设计套餐</a><a href="" style="color:#868686;">品牌设计一站购</a></dd>
+                                    <dd><a href="" style="color:#868686;">设计送电影票</a><a href="" style="color:#868686;">企业Logo</a><a href="" style="color:#868686;">餐饮Logo</a>
+                                    <a href="" style="color:#868686;">地产Logo</a><a href="" style="color:#868686;">互联网Logo</a></dd>
+                                    <dt><a href="" style="color:black;">LOGO设计</a></dt>
+                                    <dd><a href="" style="color:#868686;">Logo设计专场</a><a href="" style="color:#868686;">Logo设计套餐</a><a href="" style="color:#868686;">品牌设计一站购</a></dd>
+                                    <dd><a href="" style="color:#868686;">设计送电影票</a><a href="" style="color:#868686;">企业Logo</a><a href="" style="color:#868686;">餐饮Logo</a>
+                                    <a href="" style="color:#868686;">地产Logo</a><a href="" style="color:#868686;">互联网Logo</a></dd>
+                                 </dl>
+                              </div> 
+                             <div class="fr title-side">          
+                               <div><img src="猪八戒pic/25.jpg"></div>
+                               <div><img src="猪八戒pic/26.jpg"></div>
+                               <div><img src="猪八戒pic/27.jpg"></div>
+                             </div>
+                        </div>	
+                   </li>
+                   <li><a href="">策划</a>/<a href="">文案</a>/<a href="">取名</a>/<a href="">翻译</a>
+                       <div class="title-list"> 
+                              <div class="fl" style="width:450px;height:100%;border-right:1px solid #868686;">
+                                 <dl style="width:440px;">
+                                    <dt><a href="" style="color:black;">LOGO设计</a></dt>
+                                    <dd><a href="" style="color:#868686;">Logo设计专场</a><a href="" style="color:#868686;">Logo设计套餐</a><a href="" style="color:#868686;">品牌设计一站购</a></dd>
+                                    <dd><a href="" style="color:#868686;">设计送电影票</a><a href="" style="color:#868686;">企业Logo</a><a href="" style="color:#868686;">餐饮Logo</a>
+                                    <a href="" style="color:#868686;">地产Logo</a><a href="" style="color:#868686;">互联网Logo</a></dd>
+                                    <dt><a href="" style="color:black;">LOGO设计</a></dt>
+                                    <dd><a href="" style="color:#868686;">Logo设计专场</a><a href="" style="color:#868686;">Logo设计套餐</a><a href="" style="color:#868686;">品牌设计一站购</a></dd>
+                                    <dd><a href="" style="color:#868686;">设计送电影票</a><a href="" style="color:#868686;">企业Logo</a><a href="" style="color:#868686;">餐饮Logo</a>
+                                    <a href="" style="color:#868686;">地产Logo</a><a href="" style="color:#868686;">互联网Logo</a></dd>
+                                    <dt><a href="" style="color:black;">LOGO设计</a></dt>
+                                    <dd><a href="" style="color:#868686;">Logo设计专场</a><a href="" style="color:#868686;">Logo设计套餐</a><a href="" style="color:#868686;">品牌设计一站购</a></dd>
+                                    <dd><a href="" style="color:#868686;">设计送电影票</a><a href="" style="color:#868686;">企业Logo</a><a href="" style="color:#868686;">餐饮Logo</a>
+                                    <a href="" style="color:#868686;">地产Logo</a><a href="" style="color:#868686;">互联网Logo</a></dd>
+                                    <dt><a href="" style="color:black;">LOGO设计</a></dt>
+                                    <dd><a href="" style="color:#868686;">Logo设计专场</a><a href="" style="color:#868686;">Logo设计套餐</a><a href="" style="color:#868686;">品牌设计一站购</a></dd>
+                                    <dd><a href="" style="color:#868686;">设计送电影票</a><a href="" style="color:#868686;">企业Logo</a><a href="" style="color:#868686;">餐饮Logo</a>
+                                    <a href="" style="color:#868686;">地产Logo</a><a href="" style="color:#868686;">互联网Logo</a></dd>
+                                 </dl>
+                              </div> 
+                             <div class="fr title-side">          
+                               <div><img src="猪八戒pic/30.jpg"></div>
+                               <div><img src="猪八戒pic/31.jpg"></div>
+                               <div><img src="猪八戒pic/32.jpg"></div>
+                             </div>
+                       </div>	
+                   </li>
+                   <li><a href="">网站设计</a>/<a href="">UI设计</a>
+                        <div class="title-list"> 
+                              <div class="fl" style="width:450px;height:100%;border-right:1px solid #868686;">
+                                 <dl style="width:440px;">
+                                    <dt><a href="" style="color:black;">LOGO设计</a></dt>
+                                    <dd><a href="" style="color:#868686;">Logo设计专场</a><a href="" style="color:#868686;">Logo设计套餐</a><a href="" style="color:#868686;">品牌设计一站购</a></dd>
+                                    <dd><a href="" style="color:#868686;">设计送电影票</a><a href="" style="color:#868686;">企业Logo</a><a href="" style="color:#868686;">餐饮Logo</a>
+                                    <a href="" style="color:#868686;">地产Logo</a><a href="" style="color:#868686;">互联网Logo</a></dd>
+                                    <dt><a href="" style="color:black;">LOGO设计</a></dt>
+                                    <dd><a href="" style="color:#868686;">Logo设计专场</a><a href="" style="color:#868686;">Logo设计套餐</a><a href="" style="color:#868686;">品牌设计一站购</a></dd>
+                                    <dd><a href="" style="color:#868686;">设计送电影票</a><a href="" style="color:#868686;">企业Logo</a><a href="" style="color:#868686;">餐饮Logo</a>
+                                    <a href="" style="color:#868686;">地产Logo</a><a href="" style="color:#868686;">互联网Logo</a></dd>
+                                    <dt><a href="" style="color:black;">LOGO设计</a></dt>
+                                    <dd><a href="" style="color:#868686;">Logo设计专场</a><a href="" style="color:#868686;">Logo设计套餐</a><a href="" style="color:#868686;">品牌设计一站购</a></dd>
+                                    <dd><a href="" style="color:#868686;">设计送电影票</a><a href="" style="color:#868686;">企业Logo</a><a href="" style="color:#868686;">餐饮Logo</a>
+                                    <a href="" style="color:#868686;">地产Logo</a><a href="" style="color:#868686;">互联网Logo</a></dd>
+                                    <dt><a href="" style="color:black;">LOGO设计</a></dt>
+                                    <dd><a href="" style="color:#868686;">Logo设计专场</a><a href="" style="color:#868686;">Logo设计套餐</a><a href="" style="color:#868686;">品牌设计一站购</a></dd>
+                                    <dd><a href="" style="color:#868686;">设计送电影票</a><a href="" style="color:#868686;">企业Logo</a><a href="" style="color:#868686;">餐饮Logo</a>
+                                    <a href="" style="color:#868686;">地产Logo</a><a href="" style="color:#868686;">互联网Logo</a></dd>
+                                 </dl>
+                              </div> 
+                              <div class="fr title-side">          
+                                   <div><img src="猪八戒pic/35.png"></div>
+                                   <div><img src="猪八戒pic/36.jpg"></div>
+                                   <div><img src="猪八戒pic/37.jpg"></div>
+                              </div>
+                        </div>	
+                   </li>
+                   <li><a href="">APP</a>/<a href="">微信</a>/<a href="">软件开发</a>
+                       <div class="title-list"> 
+                              <div class="fl" style="width:450px;height:100%;border-right:1px solid #868686;">
+                                 <dl style="width:440px;">
+                                    <dt><a href="" style="color:black;">LOGO设计</a></dt>
+                                    <dd><a href="" style="color:#868686;">Logo设计专场</a><a href="" style="color:#868686;">Logo设计套餐</a><a href="" style="color:#868686;">品牌设计一站购</a></dd>
+                                    <dd><a href="" style="color:#868686;">设计送电影票</a><a href="" style="color:#868686;">企业Logo</a><a href="" style="color:#868686;">餐饮Logo</a>
+                                    <a href="" style="color:#868686;">地产Logo</a><a href="" style="color:#868686;">互联网Logo</a></dd>
+                                    <dt><a href="" style="color:black;">LOGO设计</a></dt>
+                                    <dd><a href="" style="color:#868686;">Logo设计专场</a><a href="" style="color:#868686;">Logo设计套餐</a><a href="" style="color:#868686;">品牌设计一站购</a></dd>
+                                    <dd><a href="" style="color:#868686;">设计送电影票</a><a href="" style="color:#868686;">企业Logo</a><a href="" style="color:#868686;">餐饮Logo</a>
+                                    <a href="" style="color:#868686;">地产Logo</a><a href="" style="color:#868686;">互联网Logo</a></dd>
+                                    <dt><a href="" style="color:black;">LOGO设计</a></dt>
+                                    <dd><a href="" style="color:#868686;">Logo设计专场</a><a href="" style="color:#868686;">Logo设计套餐</a><a href="" style="color:#868686;">品牌设计一站购</a></dd>
+                                    <dd><a href="" style="color:#868686;">设计送电影票</a><a href="" style="color:#868686;">企业Logo</a><a href="" style="color:#868686;">餐饮Logo</a>
+                                    <a href="" style="color:#868686;">地产Logo</a><a href="" style="color:#868686;">互联网Logo</a></dd>
+                                    <dt><a href="" style="color:black;">LOGO设计</a></dt>
+                                    <dd><a href="" style="color:#868686;">Logo设计专场</a><a href="" style="color:#868686;">Logo设计套餐</a><a href="" style="color:#868686;">品牌设计一站购</a></dd>
+                                    <dd><a href="" style="color:#868686;">设计送电影票</a><a href="" style="color:#868686;">企业Logo</a><a href="" style="color:#868686;">餐饮Logo</a>
+                                    <a href="" style="color:#868686;">地产Logo</a><a href="" style="color:#868686;">互联网Logo</a></dd>
+                                 </dl>
+                              </div> 
+                             <div class="fr title-side">          
+                               <div><img src="猪八戒pic/40.jpg"></div>
+                               <div><img src="猪八戒pic/41.jpg"></div>
+                               <div><img src="猪八戒pic/42.jpg"></div>
+                             </div>
+                        </div>	
+                   </li>
+                   <li><a href="">漫画</a>/<a href="">动画</a>/<a href="">影视</a>
+                       <div class="title-list"> 
+                                 <div class="fl" style="width:450px;height:100%;border-right:1px solid #868686;">
+                                      <dl style="width:440px;">
+                                        <dt><a href="" style="color:black;">LOGO设计</a></dt>
+                                        <dd><a href="" style="color:#868686;">Logo设计专场</a><a href="" style="color:#868686;">Logo设计套餐</a><a href="" style="color:#868686;">品牌设计一站购</a></dd>
+                                        <dd><a href="" style="color:#868686;">设计送电影票</a><a href="" style="color:#868686;">企业Logo</a><a href="" style="color:#868686;">餐饮Logo</a>
+                                        <a href="" style="color:#868686;">地产Logo</a><a href="" style="color:#868686;">互联网Logo</a></dd>
+                                        <dt><a href="" style="color:black;">LOGO设计</a></dt>
+                                        <dd><a href="" style="color:#868686;">Logo设计专场</a><a href="" style="color:#868686;">Logo设计套餐</a><a href="" style="color:#868686;">品牌设计一站购</a></dd>
+                                        <dd><a href="" style="color:#868686;">设计送电影票</a><a href="" style="color:#868686;">企业Logo</a><a href="" style="color:#868686;">餐饮Logo</a>
+                                        <a href="" style="color:#868686;">地产Logo</a><a href="" style="color:#868686;">互联网Logo</a></dd>
+                                        <dt><a href="" style="color:black;">LOGO设计</a></dt>
+                                        <dd><a href="" style="color:#868686;">Logo设计专场</a><a href="" style="color:#868686;">Logo设计套餐</a><a href="" style="color:#868686;">品牌设计一站购</a></dd>
+                                        <dd><a href="" style="color:#868686;">设计送电影票</a><a href="" style="color:#868686;">企业Logo</a><a href="" style="color:#868686;">餐饮Logo</a>
+                                        <a href="" style="color:#868686;">地产Logo</a><a href="" style="color:#868686;">互联网Logo</a></dd>
+                                        <dt><a href="" style="color:black;">LOGO设计</a></dt>
+                                        <dd><a href="" style="color:#868686;">Logo设计专场</a><a href="" style="color:#868686;">Logo设计套餐</a><a href="" style="color:#868686;">品牌设计一站购</a></dd>
+                                        <dd><a href="" style="color:#868686;">设计送电影票</a><a href="" style="color:#868686;">企业Logo</a><a href="" style="color:#868686;">餐饮Logo</a>
+                                        <a href="" style="color:#868686;">地产Logo</a><a href="" style="color:#868686;">互联网Logo</a></dd>
+                                     </dl>
+                                 </div> 
+                                 <div class="fr title-side">          
+                                   <div><img src="猪八戒pic/45.jpg"></div>
+                                   <div><img src="猪八戒pic/46.jpg"></div>
+                                   <div><img src="猪八戒pic/47.jpg"></div>
+                                 </div>
+                        </div>	
+                   </li>
+                   <li><a href="">公装服务</a>/<a href="">家装服务</a>
+                       <div class="title-list"> 
+                             <div class="fl" style="width:450px;height:100%;border-right:1px solid #868686;">
+                                 <dl style="width:440px;">
+                                    <dt><a href="" style="color:black;">LOGO设计</a></dt>
+                                    <dd><a href="" style="color:#868686;">Logo设计专场</a><a href="" style="color:#868686;">Logo设计套餐</a><a href="" style="color:#868686;">品牌设计一站购</a></dd>
+                                    <dd><a href="" style="color:#868686;">设计送电影票</a><a href="" style="color:#868686;">企业Logo</a><a href="" style="color:#868686;">餐饮Logo</a>
+                                    <a href="" style="color:#868686;">地产Logo</a><a href="" style="color:#868686;">互联网Logo</a></dd>
+                                    <dt><a href="" style="color:black;">LOGO设计</a></dt>
+                                    <dd><a href="" style="color:#868686;">Logo设计专场</a><a href="" style="color:#868686;">Logo设计套餐</a><a href="" style="color:#868686;">品牌设计一站购</a></dd>
+                                    <dd><a href="" style="color:#868686;">设计送电影票</a><a href="" style="color:#868686;">企业Logo</a><a href="" style="color:#868686;">餐饮Logo</a>
+                                    <a href="" style="color:#868686;">地产Logo</a><a href="" style="color:#868686;">互联网Logo</a></dd>
+                                    <dt><a href="" style="color:black;">LOGO设计</a></dt>
+                                    <dd><a href="" style="color:#868686;">Logo设计专场</a><a href="" style="color:#868686;">Logo设计套餐</a><a href="" style="color:#868686;">品牌设计一站购</a></dd>
+                                    <dd><a href="" style="color:#868686;">设计送电影票</a><a href="" style="color:#868686;">企业Logo</a><a href="" style="color:#868686;">餐饮Logo</a>
+                                    <a href="" style="color:#868686;">地产Logo</a><a href="" style="color:#868686;">互联网Logo</a></dd>
+                                    <dt><a href="" style="color:black;">LOGO设计</a></dt>
+                                    <dd><a href="" style="color:#868686;">Logo设计专场</a><a href="" style="color:#868686;">Logo设计套餐</a><a href="" style="color:#868686;">品牌设计一站购</a></dd>
+                                    <dd><a href="" style="color:#868686;">设计送电影票</a><a href="" style="color:#868686;">企业Logo</a><a href="" style="color:#868686;">餐饮Logo</a>
+                                    <a href="" style="color:#868686;">地产Logo</a><a href="" style="color:#868686;">互联网Logo</a></dd>
+                                 </dl>
+                             </div> 
+                             <div class="fr title-side">          
+                               <div><img src="猪八戒pic/50.jpg"></div>
+                               <div><img src="猪八戒pic/71.jpg"></div>
+                               <div><img src="猪八戒pic/52.jpg"></div>
+                             </div>
+                      </div>	
+                   </li>
+                   <li><a href="">产品</a>/<a href="">机械</a>/<a href="">电路设计</a>
+                         <div class="title-list"> 
+                              <div class="fl" style="width:450px;height:100%;border-right:1px solid #868686;">
+                                 <dl style="width:440px;">
+                                    <dt><a href="" style="color:black;">LOGO设计</a></dt>
+                                    <dd><a href="" style="color:#868686;">Logo设计专场</a><a href="" style="color:#868686;">Logo设计套餐</a><a href="" style="color:#868686;">品牌设计一站购</a></dd>
+                                    <dd><a href="" style="color:#868686;">设计送电影票</a><a href="" style="color:#868686;">企业Logo</a><a href="" style="color:#868686;">餐饮Logo</a>
+                                    <a href="" style="color:#868686;">地产Logo</a><a href="" style="color:#868686;">互联网Logo</a></dd>
+                                    <dt><a href="" style="color:black;">LOGO设计</a></dt>
+                                    <dd><a href="" style="color:#868686;">Logo设计专场</a><a href="" style="color:#868686;">Logo设计套餐</a><a href="" style="color:#868686;">品牌设计一站购</a></dd>
+                                    <dd><a href="" style="color:#868686;">设计送电影票</a><a href="" style="color:#868686;">企业Logo</a><a href="" style="color:#868686;">餐饮Logo</a>
+                                    <a href="" style="color:#868686;">地产Logo</a><a href="" style="color:#868686;">互联网Logo</a></dd>
+                                    <dt><a href="" style="color:black;">LOGO设计</a></dt>
+                                    <dd><a href="" style="color:#868686;">Logo设计专场</a><a href="" style="color:#868686;">Logo设计套餐</a><a href="" style="color:#868686;">品牌设计一站购</a></dd>
+                                    <dd><a href="" style="color:#868686;">设计送电影票</a><a href="" style="color:#868686;">企业Logo</a><a href="" style="color:#868686;">餐饮Logo</a>
+                                    <a href="" style="color:#868686;">地产Logo</a><a href="" style="color:#868686;">互联网Logo</a></dd>
+                                    <dt><a href="" style="color:black;">LOGO设计</a></dt>
+                                    <dd><a href="" style="color:#868686;">Logo设计专场</a><a href="" style="color:#868686;">Logo设计套餐</a><a href="" style="color:#868686;">品牌设计一站购</a></dd>
+                                    <dd><a href="" style="color:#868686;">设计送电影票</a><a href="" style="color:#868686;">企业Logo</a><a href="" style="color:#868686;">餐饮Logo</a>
+                                    <a href="" style="color:#868686;">地产Logo</a><a href="" style="color:#868686;">互联网Logo</a></dd>
+                                 </dl>
+                              </div> 
+                              <div class="fr title-side">          
+                                   <div><img src="猪八戒pic/55.jpg"></div>
+                                   <div><img src="猪八戒pic/72.jpg"></div>
+                                   <div><img src="猪八戒pic/57.jpg"></div>
+                              </div>
+                       </div>	
+                   </li>
+                   <li><a href="">游戏开发</a>/<a href="">八戒众帮</a>
+                        <div class="title-list"> 
+                              <div class="fl" style="width:450px;height:100%;border-right:1px solid #868686;">
+                                 <dl style="width:440px;">
+                                    <dt><a href="" style="color:black;">LOGO设计</a></dt>
+                                    <dd><a href="" style="color:#868686;">Logo设计专场</a><a href="" style="color:#868686;">Logo设计套餐</a><a href="" style="color:#868686;">品牌设计一站购</a></dd>
+                                    <dd><a href="" style="color:#868686;">设计送电影票</a><a href="" style="color:#868686;">企业Logo</a><a href="" style="color:#868686;">餐饮Logo</a>
+                                    <a href="" style="color:#868686;">地产Logo</a><a href="" style="color:#868686;">互联网Logo</a></dd>
+                                    <dt><a href="" style="color:black;">LOGO设计</a></dt>
+                                    <dd><a href="" style="color:#868686;">Logo设计专场</a><a href="" style="color:#868686;">Logo设计套餐</a><a href="" style="color:#868686;">品牌设计一站购</a></dd>
+                                    <dd><a href="" style="color:#868686;">设计送电影票</a><a href="" style="color:#868686;">企业Logo</a><a href="" style="color:#868686;">餐饮Logo</a>
+                                    <a href="" style="color:#868686;">地产Logo</a><a href="" style="color:#868686;">互联网Logo</a></dd>
+                                    <dt><a href="" style="color:black;">LOGO设计</a></dt>
+                                    <dd><a href="" style="color:#868686;">Logo设计专场</a><a href="" style="color:#868686;">Logo设计套餐</a><a href="" style="color:#868686;">品牌设计一站购</a></dd>
+                                    <dd><a href="" style="color:#868686;">设计送电影票</a><a href="" style="color:#868686;">企业Logo</a><a href="" style="color:#868686;">餐饮Logo</a>
+                                    <a href="" style="color:#868686;">地产Logo</a><a href="" style="color:#868686;">互联网Logo</a></dd>
+                                    <dt><a href="" style="color:black;">LOGO设计</a></dt>
+                                    <dd><a href="" style="color:#868686;">Logo设计专场</a><a href="" style="color:#868686;">Logo设计套餐</a><a href="" style="color:#868686;">品牌设计一站购</a></dd>
+                                    <dd><a href="" style="color:#868686;">设计送电影票</a><a href="" style="color:#868686;">企业Logo</a><a href="" style="color:#868686;">餐饮Logo</a>
+                                    <a href="" style="color:#868686;">地产Logo</a><a href="" style="color:#868686;">互联网Logo</a></dd>
+                                 </dl>
+                              </div> 
+                              <div class="fr title-side">          
+                                   <div><img src="猪八戒pic/60.jpg"></div>
+                                   <div><img src="猪八戒pic/61.jpg"></div>
+                                   <div><img src="猪八戒pic/62.jpg"></div>
+                              </div>
+                          </div>	
+                   </li>	
+               </ul>
+         </div> 
+         
+         <div class="fl title-pic">
+                <div style="width:450px;height:470px;overflow:hidden;position:relative">   
+                               <ul id="pic">
+                                 <li><img src="猪八戒pic/1.png"></li>
+                                 <li><img src="猪八戒pic/2.png"></li>
+                                 <li><img src="猪八戒pic/3.jpg"></li>
+                                 <li><img src="猪八戒pic/4.jpg"></li>
+                                 <li><img src="猪八戒pic/5.jpg"></li>
+                                 <li><img src="猪八戒pic/6.jpg"></li>
+                               </ul>
+                                  
+                             <div id="yuan-button" style="position:absolute;bottom:10px;margin-left:150px;">
+                                 <li index="0" class="bkcolor"></li>
+                                 <li index="1" class="whcolor"></li>
+                                 <li index="2" class="whcolor"></li>
+                                 <li index="3" class="whcolor"></li>
+                                 <li index="4" class="whcolor"></li>
+                                 <li index="5" class="whcolor"></li>       
+                             </div>
+                             <div id="left-button" class="move-button" style="left:10px;">&lt;</div>
+                             <div id="right-button" class="move-button" style="right:10px;">&gt;</div>
+                </div> <!--焦点图左侧-->  
+                
+                <div class="fr title-side">          
+                        <div><img src="猪八戒pic/7.jpg"></div>
+                        <div><img src="猪八戒pic/8.jpg"></div>
+                        <div><img src="猪八戒pic/9.jpg"></div>
+                </div><!--焦点图右侧-->      
+	    </div><!--焦点图中心-->
+        <div class="fr" style="width:335px;height:470px;border:1px solid #e8e8e8;">
+              <div style="width:100%;height:120px;border-bottom:1px solid #e8e8e8">
+              </div>
+              <div style="width:100%;height:150px;">
+              </div>
+              <div style="width:100%;height:199px;">
+              <a href=""><img src="猪八戒pic/服务宝.jpg" style="width:335px;height:199px;"></a>
+              </div>
+        </div> <!-- 焦点图最右侧 -->   
+</div><!--焦点图区-->
+
+<div class="wrap">
+    <div class="midbox">
+          <div class="fl smallbox">
+               <div class="fl bigtitle">当前<br>热点
+               </div>
+               <div class="fr">
+                    <ul>
+                        <li class="fl"><a href="">定制开发</a></li>
+                        <li class="fl"><a href="">网店诊断</a></li>
+                        <li class="fl"><a href="">王牌商家</a></li>
+                        <li class="fl"><a href="">品牌设计</a></li>
+                        <li class="fl"><a href="">商标注册</a></li>
+                        <li class="fl"><a href="">线下培训</a></li>
+                        <li class="fl"><a href="">品牌推荐</a></li>
+                        <li class="fl"><a href="">招商加盟</a></li>
+                    </ul>
+               </div>
+          </div>
+          <div class="fl smallbox">
+             <div class="fl bigtitle">热门<br>搜索
+             </div>
+             <div class="fr">
+                    <ul>
+                        <li class="fl"><a href="">LOGO</a></li>
+                        <li class="fl"><a href="">PPT</a></li>
+                        <li class="fl"><a href="">画册设计</a></li>
+                        <li class="fl"><a href="">网站制作</a></li>
+                        <li class="fl"><a href="">网络推广</a></li>
+                        <li class="fl"><a href="">微信投票</a></li>
+                        <li class="fl"><a href="">网站建设</a></li>
+                        <li class="fl"><a href="">包装设计</a></li>
+                    </ul>
+             </div>
+          </div>
+          <div class="fr smallbox" style="border:none;">
+             <div class="fl bigtitle">发现<br>好店
+             </div>
+             <div class="fr">
+                    <ul>
+                        <li class="fl"><a href="">爆款打造</a></li>
+                        <li class="fl"><a href="">久久建站</a></li>
+                        <li class="fl"><a href="">风行推广</a></li>
+                        <li class="fl"><a href="">动画设计</a></li>
+                        <li class="fl"><a href="">软文写作</a></li>
+                        <li class="fl"><a href="">满荣网络</a></li>
+                        <li class="fl"><a href="">淘宝推广</a></li>
+                        <li class="fl"><a href="">产品包装</a></li>
+                    </ul>
+             </div>
+          </div>
+    </div>
+</div>
+
+<div class="wrap">
+  <div> 
+  <img src="猪八戒pic/QQ截图20160516141144.png">
+  <a href=""><img src="猪八戒pic/E4BB8AE697A5E68EA8E88D90-E5A4A7E783AD.jpg"></a>
+  <a href="" ><img src="猪八戒pic/E5889BE4B896E7BD91E7BB9CE4BB8AE5A4A9E68EA8E88D90.jpg"></a>
+  <a href=""><img src="猪八戒pic/E4BB8AE697A5E68EA8E88D90-335x200E6A8A1E69DBF-E8AFB7E5AD98PNG.png"></a>
+  </div>
+</div> 	<!--今日推荐-->
+
+<div class="wrap" style="margin-top:15px;overflow:hidden;">
+    <div class="fl"><img src="猪八戒pic/QQ截图20160516141246.png">
+    </div>
+    <div class="fr" style="width:1014px;height:199px;border-left:1px solid #e8e8e8;border-bottom:1px solid #e8e8e8;">
+        <div class="menulist fl"><a href=""><img src="猪八戒pic/untitled1.bmp">
+        	<span class="">爱的视觉</span>
+        </a></div>
+        <div class="menulist fl"><a href=""><img src="猪八戒pic/untitled2.bmp">
+        	<span class="">巴斯动漫</span>
+        </a></div>
+        <div class="menulist fl"><a href=""><img src="猪八戒pic/untitled3.bmp">
+ 			<span class="">东方一品</span>
+        </a></div>
+        <div class="menulist fl"><a href=""><img src="猪八戒pic/untitled4.bmp">
+        	<span class="">方智广告</span>
+        </a></div>
+        <div class="menulist fl"><a href=""><img src="猪八戒pic/untitled5.bmp">
+        	<span class="">九环网络</span>
+        </a></div>
+        <div class="menulist fl"><a href=""><img src="猪八戒pic/untitled6.bmp">
+        	<span class="">霖骏文化</span>
+        </a></div>
+        <div class="menulist fl"><a href=""><img src="猪八戒pic/untitled7.bmp">
+        	<span class="">灵秀网络</span>
+        </a></div>
+        <div class="menulist fl"><a href=""><img src="猪八戒pic/untitled8.bmp">
+        	<span class="">马上有品牌</span>
+        </a></div>
+        <div class="menulist fl"><a href=""><img src="猪八戒pic/untitled9.bmp">
+        	<span class="">仓颉文化</span>
+        </a></div>
+        <div class="menulist fl"><a href=""><img src="猪八戒pic/untitled10.bmp">
+        	<span class="">齐晟设计</span>
+        </a></div>
+        <div class="menulist fl"><a href=""><img src="猪八戒pic/untitled11.bmp">
+        	<span class="">子今品牌</span>
+        </a></div>
+        <a href=""><div class="menulist fl special">更多品牌服务商&gt;</div></a>
+	</div>
+</div><!-- 品牌专区-->
+
+<div class="wrap">
+	<div class="shizhu">
+       <h2>施主你是？</h2>
+       <ul >
+           <li><a href="" class="ahui a_orange">创业人员</a></li>
+           <li><a href="" class="ahui a_orange">个体其他</a></li>
+           <li><a href="" class="ahui a_orange">网店店主</a></li>
+           <li><a href="" class="ahui a_orange">互联网从业者</a></li>
+           <li><a href="" class="ahui a_orange">加工制造商</a></li>
+           <li><a href="" class="ahui a_orange">文化传媒</a></li>
+           <li><a href="" class="ahui a_orange">实体店主</a></li>
+           <li><a href="" class="ahui a_orange">大赛频道</a></li>
+       </ul>
+	</div>
+</div><!--施主你是-->
+
+<div class="wrap">
+	<div id="adv">
+		<div id="adv-button">
+			<div id="adv-button1"></div>
+			<div id="adv-button2"></div>
+		</div>
+	<div id="adv1">
+		<div class="adv-menu">
+			<div class="fl adv-list">
+					<div class="fl"><a href=""><img src="猪八戒pic/QQ截图20160531205242.png"><h3>创业人员</h3></a>
+					</div>
+					<div class="fr adv-line">
+						<h4>展会活动</h4>
+						<ul>
+						  <li><a href="">展台设计</a></li>
+						  <li><a href="">活动策划</a></li>
+						  <li><a href="">展架易拉宝</a></li>
+						  <li><a href="">展厅装修</a></li>
+						  <li><a href="">广告文案</a></li>
+						  <li><a href="">1元抢宣传视频</a></li>
+						</ul>
+					</div>
+					<div class="fr adv-line">
+						<h4>展会活动</h4>
+						<ul>
+						  <li><a href="">展台设计</a></li>
+						  <li><a href="">活动策划</a></li>
+						  <li><a href="">展架易拉宝</a></li>
+						  <li><a href="">展厅装修</a></li>
+						  <li><a href="">广告文案</a></li>
+						  <li><a href="">1元抢宣传视频</a></li>
+						</ul>
+					</div>
+			</div>
+			<div class="fl adv-list">
+					<div class="fl"><a href=""><img src="猪八戒pic/QQ截图20160531205242.png"><h3>创业人员</h3></a>
+					</div>
+					<div class="fr adv-line">
+						<h4>展会活动</h4>
+						<ul>
+						  <li><a href="">展台设计</a></li>
+						  <li><a href="">活动策划</a></li>
+						  <li><a href="">展架易拉宝</a></li>
+						  <li><a href="">展厅装修</a></li>
+						  <li><a href="">广告文案</a></li>
+						  <li><a href="">1元抢宣传视频</a></li>
+						</ul>
+					</div>
+					<div class="fr adv-line">
+						<h4>展会活动</h4>
+						<ul>
+						  <li><a href="">展台设计</a></li>
+						  <li><a href="">活动策划</a></li>
+						  <li><a href="">展架易拉宝</a></li>
+						  <li><a href="">展厅装修</a></li>
+						  <li><a href="">广告文案</a></li>
+						  <li><a href="">1元抢宣传视频</a></li>
+						</ul>
+					</div>
+			</div>
+			<div class="fl adv-list">
+					<div class="fl"><a href=""><img src="猪八戒pic/QQ截图20160531205242.png"><h3>创业人员</h3></a>
+					</div>
+					<div class="fr adv-line">
+						<h4>展会活动</h4>
+						<ul>
+						  <li><a href="">展台设计</a></li>
+						  <li><a href="">活动策划</a></li>
+						  <li><a href="">展架易拉宝</a></li>
+						  <li><a href="">展厅装修</a></li>
+						  <li><a href="">广告文案</a></li>
+						  <li><a href="">1元抢宣传视频</a></li>
+						</ul>
+					</div>
+					<div class="fr adv-line">
+						<h4>展会活动</h4>
+						<ul>
+						  <li><a href="">展台设计</a></li>
+						  <li><a href="">活动策划</a></li>
+						  <li><a href="">展架易拉宝</a></li>
+						  <li><a href="">展厅装修</a></li>
+						  <li><a href="">广告文案</a></li>
+						  <li><a href="">1元抢宣传视频</a></li>
+						</ul>
+					</div>
+			</div>
+		</div><!--前半部-->
+		
+		<div class="fl adv-menu">
+			<div class="fl adv-list">
+					<div class="fl"><a href=""><img src="猪八戒pic/QQ截图20160531224420.png"><h3>新店开张</h3></a>
+					</div>
+					<div class="fr adv-line">
+						<h4>展会活动</h4>
+						<ul>
+						  <li><a href="">展台设计</a></li>
+						  <li><a href="">活动策划</a></li>
+						  <li><a href="">展架易拉宝</a></li>
+						  <li><a href="">展厅装修</a></li>
+						  <li><a href="">广告文案</a></li>
+						  <li><a href="">1元抢宣传视频</a></li>
+						</ul>
+					</div>
+					<div class="fr adv-line">
+						<h4>展会活动</h4>
+						<ul>
+						  <li><a href="">展台设计</a></li>
+						  <li><a href="">活动策划</a></li>
+						  <li><a href="">展架易拉宝</a></li>
+						  <li><a href="">展厅装修</a></li>
+						  <li><a href="">广告文案</a></li>
+						  <li><a href="">1元抢宣传视频</a></li>
+						</ul>
+					</div>
+			</div>
+			<div class="fl adv-list">
+					<div class="fl"><a href=""><img src="猪八戒pic/QQ截图20160531224420.png"><h3>新店开张</h3></a>
+					</div>
+					<div class="fr adv-line">
+						<h4>展会活动</h4>
+						<ul>
+						  <li><a href="">展台设计</a></li>
+						  <li><a href="">活动策划</a></li>
+						  <li><a href="">展架易拉宝</a></li>
+						  <li><a href="">展厅装修</a></li>
+						  <li><a href="">广告文案</a></li>
+						  <li><a href="">1元抢宣传视频</a></li>
+						</ul>
+					</div>
+					<div class="fr adv-line">
+						<h4>展会活动</h4>
+						<ul>
+						  <li><a href="">展台设计</a></li>
+						  <li><a href="">活动策划</a></li>
+						  <li><a href="">展架易拉宝</a></li>
+						  <li><a href="">展厅装修</a></li>
+						  <li><a href="">广告文案</a></li>
+						  <li><a href="">1元抢宣传视频</a></li>
+						</ul>
+					</div>
+			</div>
+			<div class="fl adv-list">
+					<div class="fl"><a href=""><img src="<img src="猪八戒pic/new-logo-index.png"><h3>新店开张</h3></a>
+					</div>
+					<div class="fr adv-line">
+						<h4>展会活动</h4>
+						<ul>
+						  <li><a href="">展台设计</a></li>
+						  <li><a href="">活动策划</a></li>
+						  <li><a href="">展架易拉宝</a></li>
+						  <li><a href="">展厅装修</a></li>
+						  <li><a href="">广告文案</a></li>
+						  <li><a href="">1元抢宣传视频</a></li>
+						</ul>
+					</div>
+					<div class="fr adv-line">
+						<h4>展会活动</h4>
+						<ul>
+						  <li><a href="">展台设计</a></li>
+						  <li><a href="">活动策划</a></li>
+						  <li><a href="">展架易拉宝</a></li>
+						  <li><a href="">展厅装修</a></li>
+						  <li><a href="">广告文案</a></li>
+						  <li><a href="">1元抢宣传视频</a></li>
+						</ul>
+					</div>
+			</div>
+		</div><!--后半部分-->
+	</div>	
+	</div>
+</div>
+</body>
+</html>
