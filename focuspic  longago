@@ -1,0 +1,114 @@
+ <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>焦点图</title>
+<script type="text/javascript">
+	window.onload=function(){
+	var pic=document.getElementById("a");
+	var b=document.getElementById("b");
+	var button=b.getElementsByTagName("li");
+	var c=document.getElementById("c");
+	var d=document.getElementById("d");
+	var index=1;
+	var timer;
+	var wrap=document.getElementById("wrap");
+	for( var i=0;i<button.length;i++){
+		  button[i].onclick=function(){
+		  pic.style.left=-441*(this.getAttribute("attr")-1)+'px';
+		 
+		 index=parseInt(this.getAttribute("attr"));
+		  light();
+	  };
+	  
+	 function light(){
+		 for(var i=0;i<button.length;i++){
+			if(button[i].className=="bling"){
+				 button[i].className="bai";
+				 }		
+			 };
+		button[index-1].className='bling';
+		  }
+	function clickButton(change){
+		if(pic.style.left=='-882px'&&change<0){
+			pic.style.left='0px';}
+		else 
+		if(pic.style.left=='0px'&&change>0){
+			pic.style.left='-882px';}
+		
+		else{pic.style.left=parseInt(pic.style.left)+change+'px';}
+		};
+
+		c.onclick=function() {
+			if(index==3)
+			{index=1;}
+			else{index+=1;}
+			light();
+			clickButton(-441);
+			};
+		d.onclick=function() {
+			if(index==1)
+			{index=3;}
+			else{index-=1;}
+			light();
+			clickButton(441);
+			};
+		function move(){
+			timer=setInterval(c.onclick,2000);
+			}
+		function stop(){
+			clearInterval(timer);
+			}
+		wrap.onmouseout=move;
+		wrap.onmouseover=stop;
+		
+		} ;
+		move();
+	}	
+
+	
+</script>
+<style type="text/css">
+*{padding:0;margin:0;}
+li{list-style:none;}
+#wrap{width:441px;height:441px;overflow:hidden;position:relative;margin:0 auto;}
+#a{width:1323px;height:441px;position:absolute;left:0;top:0;}
+#a li{float:left;}
+#a img{width:441px;height:441px;}
+#b{width:200px;height:30px;position:absolute;left:150px;bottom:15px;}
+#b li{width:20px;height:20px;margin-right:15px;float:left;border-radius:10px;border:2px solid orange;}
+#c{position: absolute;right: 0;top: 200px;width: 30px;height: 30px;background: #FFF;text-align: center;font-size: 30px;opacity: 0.3;}
+#d{position:absolute;left:0;top:200px;width:30px;height:30px;background:#FFF;text-align:center;font-size:30px;opacity: 0.3;}
+#c:hover{background:orange;opacity: 1;}
+#d:hover{background:orange;opacity: 1;}
+.bling{background:orange;}
+.bai{background:white;}
+</style>
+</head>
+  
+<body>
+
+<h1 align="center">焦点图模拟</h1>
+<div id="wrap" >
+	<div id="a"  style="left:0">
+    <ul>	
+    	<li><img src="http://v1.qzone.cc/skin/201601/26/18/54/56a7506fcb011774.jpg%21600x600.jpg"></li>
+        <li><img src="http://img.pconline.com.cn/images/upload/upc/tx/wallpaper/1212/18/c2/16701403_1355821740885_800x600.jpg"></li>
+        <li><img src="http://cdn.aixifan.com/dotnet/artemis/u/cms/www/201604/162144168unfa09i.jpg"></li>
+    </ul>
+    </div>
+     <div id="b">	
+           <ul>
+            <li attr="1" class="bling"></li>
+           	<li attr="2" class="bai"></li>
+            <li attr="3" class="bai"></li>
+           </ul>
+     </div>
+     <div id="c">&gt;</div>
+     <div id="d">&lt;</div>
+</div>
+
+
+
+</body>
+</html>
