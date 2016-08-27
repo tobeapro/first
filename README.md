@@ -2,7 +2,7 @@
 
 something
 
-1、As a loler,these are anchors i am getting used to seeing.
+1、a loler,some anchors.
 
 2、just a focus pictrues by js.style.
 
