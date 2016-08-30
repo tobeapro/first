@@ -1,9 +1,8 @@
 # first
 
-something
 
 1、a loler,some anchors.
 
-2、just a focus pictrues by js.style.
+2、js写的简单的焦点图
 
-3、show get date() by using canvas.
+3、用canvas写的数字时钟
