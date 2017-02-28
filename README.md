@@ -1,7 +1,7 @@
 # first
 
 
-1、a loler,some anchors.
+## 1、a loler,some anchors.
 
 2、js写的简单的焦点图
 
